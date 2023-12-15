@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Accounting Landing Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            width: 60%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .form-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Carbon Accounting Platform</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <form id="carbonForm">
+                <label for="firstName">Primeiro Nome:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Último Nome:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mobile">Fone Móvel:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+
+                <label for="industry">Segmento:</label>
+                <input type="text" id="industry" name="industry" required>
+
+                <label for="country">País:</label>
+                <input type="text" id="country" name="country" required>
+
+                <label for="state">Estado:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Additional content or images can be added on the left side -->
+    </div>
+
+    <script>
+        // You can add JavaScript functionality here, such as form submission handling
+        document.getElementById("carbonForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+        });
+    </script>
+
+</body>
+</html>
