@@ -3,126 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Carbon Accounting Landing Page</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #4CAF50;
-            color: white;
-        }
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
 
-        .container {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+}
 
-        .form-container {
-            width: 60%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+.carbon-ad {
+    text-align: center;
+}
 
-        .form-container label {
-            display: block;
-            margin-bottom: 8px;
-        }
+.carbon-ad img {
+    max-width: 100%;
+    height: auto;
+}
 
-        .form-container input,
-        .form-container select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
+.signup-form {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        .form-container button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
 
-        .form-container button:hover {
-            background-color: #45a049;
-        }
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-            .form-container {
-                width: 100%;
-            }
-        }
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+}
+
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Carbon Accounting Platform</h1>
+        <h1>Your Company</h1>
+        <p>Join the Carbon Accounting Revolution</p>
     </header>
 
-    <div class="container">
-        <div class="form-container">
-            <form id="carbonForm">
-                <label for="firstName">Primeiro Nome:</label>
-                <input type="text" id="firstName" name="firstName" required>
+    <section class="main-content">
+        <div class="carbon-ad">
+            <img src="carbon_ad_image.jpg" alt="Carbon Accounting Ad">
+            <p>Measure, manage, and reduce your carbon footprint with our platform. Sign up now!</p>
+            <a href="#signup" class="cta-button">Sign Up</a>
+        </div>
 
-                <label for="lastName">Último Nome:</label>
-                <input type="text" id="lastName" name="lastName" required>
+        <div id="signup" class="signup-form">
+            <h2>Get Started</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="mobile">Fone Móvel:</label>
-                <input type="tel" id="mobile" name="mobile" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
 
-                <label for="industry">Segmento:</label>
-                <input type="text" id="industry" name="industry" required>
-
-                <label for="country">País:</label>
-                <input type="text" id="country" name="country" required>
-
-                <label for="state">Estado:</label>
-                <input type="text" id="state" name="state" required>
-
-                <label for="city">Cidade:</label>
-                <input type="text" id="city" name="city" required>
-
-                <button type="submit">Enviar</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
+    </section>
 
-        <!-- Additional content or images can be added on the left side -->
-    </div>
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
 
     <script>
-        // You can add JavaScript functionality here, such as form submission handling
-        document.getElementById("carbonForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            // Add your form submission logic here
-        });
-    </script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
 
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // You can add code here to send form data to a server using AJAX or fetch API.
+        // Example:
+        // const formData = new FormData(contactForm);
+        // fetch('your-server-endpoint', {
+        //     method: 'POST',
+        //     body: formData,
+        // })
+        // .then(response => response.json())
+        // .then(data => console.log(data))
+        // .catch(error => console.error('Error:', error));
+    });
+});
+    </script>
 </body>
 </html>
